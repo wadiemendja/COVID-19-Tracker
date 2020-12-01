@@ -10,6 +10,5 @@ app.listen(port, () => console.log('listening to localhost:' + port)); // listen
 app.get('/api', async function (req, res) {
     const div = await fetchCovidStatus() // fetching data
         .then((data) => filterData(data)); // filtering data
-    console.log(div)
     return res.send(div); // send data
 });
