@@ -4,9 +4,10 @@ async function dataFether() {
     document.getElementById('app').innerHTML = data;
 }
 
-dataFether().then(function(){
+dataFether().then(function () {
     clearInterval(load);
-    loading.style.display = "none";    
+    loading.style.display = "none";
+    cleanUpdata();
 });
 
 const loading = document.getElementById("loading");
@@ -15,3 +16,11 @@ const load = setInterval(() => {
     loading.style.transform = "rotateY(" + counter + "deg)";
     counter++;
 }, 1);
+
+function cleanUpdata() {
+    // img source 
+    const img = document.querySelector("img");
+    img.src = "https://www.worldometers.info/img/flags/small/tn_ag-flag.gif";
+    // remove some useless elements
+    document.getElementById('page-top').remove();
+}

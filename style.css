@@ -1,3 +1,6 @@
 #loading {text-align: center; }
 
-#app{text-align: center;}
+#app{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); line-height: 1.42857143; font-family: noto sans,sans-serif; box-sizing: border-box; min-height: 500px; font-size: 15px; color: #222;
+    text-align: center;
+}
